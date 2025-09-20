@@ -9,12 +9,14 @@ $padding-pc: 25px;
 $padding-sp: 20px;
 
 // フォント
-$font-main: "";
-$font-sub: "";
+$font-main: "Noto Sans", sans-serif;
+$font-sub: "Inter", sans-serif;
 
 // 色指定
-$black: #333;
+$black: #000000;
 $white: #fff;
+$red: #b10000;
+$pink: #fff1f1;
 
 // ブレイクポイント
 $breakpoints: (
