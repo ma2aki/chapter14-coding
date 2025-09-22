@@ -50,9 +50,10 @@ $mediaquerys: (
 }
 
 // line-height
+
 @mixin l_height($pixels, $height) {
   font-size: $pixels * 1px;
-  line-height: $height / $pixels;
+  line-height: math.div($height, $pixels);
 }
 
 @mixin f_around($pixels, $height: false, $weight: false, $spacing: false) {

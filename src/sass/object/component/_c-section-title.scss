@@ -1,0 +1,27 @@
+@use "global" as *;
+
+.c-section-title {
+  @include mq(md) {
+    font-size: myrem(60);
+    font-weight: bold;
+    position: relative;
+  }
+}
+
+.c-section-title::first-letter {
+  @include mq(md) {
+    color: $red;
+  }
+}
+
+.c-section-title::after {
+  @include mq(md) {
+    content: attr(data-text) "";
+    font-size: myrem(16);
+    font-weight: bold;
+    letter-spacing: 0.03em;
+    position: absolute;
+    left: myrem(9);
+    bottom: myrem(-14);
+  }
+}
