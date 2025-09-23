@@ -1,18 +1,18 @@
 @use "global" as *;
 
-.c-card01 {
+.c-card02 {
   @include mq(md) {
   }
 }
 
-.c-card01__img {
+.c-card02__img {
   @include mq(md) {
     width: myrem(317);
     height: myrem(195);
   }
 }
 
-.c-card01__img img {
+.c-card02__img img {
   @include mq(md) {
     width: 100%;
     height: 100%;
@@ -21,52 +21,38 @@
   }
 }
 
-.c-card01__title {
+.c-card02__meta {
   @include mq(md) {
-    margin-top: myrem(17);
-    font-weight: bold;
-    font-size: myrem(22);
-    padding-bottom: myrem(10);
-    border-bottom: 1px solid $black;
+    display: flex;
+    align-items: center;
+    gap: myrem(20);
+    margin-top: myrem(10);
   }
 }
 
-.c-card01__text {
+.c-card02__text {
   @include mq(md) {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 4; /* 制限したい行数が3の場合 */
-    overflow: hidden;
-    @include l_height(16, 24);
+    @include l_height(16, 26);
     margin-top: myrem(14);
     letter-spacing: 0.03em;
   }
 }
 
-.c-card01__meta {
-  @include mq(md) {
-    display: flex;
-    gap: myrem(11);
-  }
-}
-
-.c-card01__label {
+.c-card02__label {
   @include mq(md) {
     color: $white;
     background-color: $black;
     font-size: myrem(14);
     font-weight: bold;
-    letter-spacing: 0.3em;
-    padding: myrem(6) myrem(24) myrem(5) myrem(29);
+    letter-spacing: 0.03em;
+    padding: myrem(6) myrem(24) myrem(5) myrem(23);
   }
 }
 
-.c-card01__year {
+.c-card02__date {
   @include mq(md) {
-    font-size: myrem(14);
+    font-size: myrem(16);
     font-weight: bold;
-    border: myrem(1) solid $red;
     letter-spacing: 0.03em;
-    padding: myrem(6) myrem(20) myrem(3) myrem(20);
   }
 }

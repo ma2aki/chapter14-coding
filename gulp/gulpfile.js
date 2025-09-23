@@ -9,7 +9,7 @@ const srcPath = {
     `${srcBase}/js/**/*.js`,
     `!${srcBase}/js/swiper-bundle.min.js`,
     `!${srcBase}/js/**/swiper-bundle.min.min.js`,
-  ], // jsのminファイルを除外 
+  ], // jsのminファイルを除外
   jsUnminified: `${srcBase}/js/swiper-bundle.min.js`,
 };
 const distPath = {
@@ -22,7 +22,10 @@ const distPath = {
 // ローカルサーバー立ち上げ
 const browserSync = require("browser-sync");
 const browserSyncOption = {
-  server: distBase, // サーバーのルートディレクトリ
+  server: {
+    baseDir: distBase, // サーバーのルートディレクトリ
+    index: "top.html", // トップページを top.html に指定
+  },
 };
 const browserSyncFunc = () => {
   browserSync.init(browserSyncOption); // Browsersyncの初期化

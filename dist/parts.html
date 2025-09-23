@@ -25,7 +25,7 @@
     <meta name="slurp" content="noindex, nofollow" />
     <!-- Yahooのクローラーにインデックスしないよう指示 -->
     <!-- ファビコン -->
-    <link rel="icon" href="" />
+    <link rel="icon" href="#" />
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -42,7 +42,61 @@
   <body>
     <!-- ヘッダー -->
     <header class="p-header l-header js-header">
-      <a href="index.html">index.htmlへ飛ぶよー</a>
+      <header class="p-header l-header js-header">
+        <div class="p-header__wrapper">
+          <h1 class="p-header__logo js-header">
+            <a href="/" class="p-header__logo-image js-header">
+              <img src="./images/logo.png" alt="会社ロゴ" />
+            </a>
+          </h1>
+          <button
+            class="p-header__hamburger js-hamburger"
+            aria-label="ハンバーガーメニュー"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <nav class="p-header__nav js-drawer">
+            <div class="p-header__nav-inner">
+              <div class="p-header__nav-inner2">
+                <ul class="p-header__nav-list">
+                  <li class="p-header__nav-item p-header-nav-item">
+                    <a href="parts.html" class="p-header-nav-item__link"
+                      >ホーム</a
+                    >
+                  </li>
+                  <li class="p-header__nav-item">
+                    <a href="top.html" class="p-header-nav-item__link"
+                      >お知らせ</a
+                    >
+                  </li>
+                  <li class="p-header__nav-item">
+                    <a href="top.html" class="p-header-nav-item__link"
+                      >製品一覧</a
+                    >
+                  </li>
+                  <li class="p-header__nav-item p-header-nav-item js-accordion">
+                    <a href="parts.html" class="p-header-nav-item__link"
+                      >我々について</a
+                    >
+                  </li>
+                  <li class="p-header__nav-item p-header-nav-item js-accordion">
+                    <a href="parts.html" class="p-header-nav-item__link"
+                      >採用情報</a
+                    >
+                  </li>
+                  <li class="p-header__nav-item p-header-nav-item js-accordion">
+                    <a href="parts.html" class="p-header-nav-item__link"
+                      >お問い合わせ</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
     </header>
     <main>
       <section class="p-section">
@@ -87,7 +141,7 @@
               />
             </picture>
             <div class="c-card02__meta">
-              <p class="c-card02__label">News</p>
+              <p class="c-card02__label">NEWS</p>
               <time class="c-card02__date" datetime="2024-01-01"
                 >2024.01.01</time
               >
