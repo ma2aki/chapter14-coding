@@ -20,7 +20,7 @@
   @include mq(md) {
     display: flex;
     align-items: center;
-    padding-left: myrem(100);
+    padding-left: calc(100 / 1440 * 100vw);
   }
 }
 
@@ -30,7 +30,7 @@
   width: calc(190 / 375 * 100%);
   z-index: 44;
   @include mq(md) {
-    width: calc(300 / 1440 * 100%);
+    width: calc(300 / 1340 * 100%);
     transition: 0.4s;
   }
 }
@@ -101,7 +101,8 @@
     position: static;
     height: inherit;
     padding: 0;
-    width: 100%;
+    width: calc(1140 / 1440 * 100%);
+    padding-right: calc(74 / 1440 * 100vw);
     align-items: center;
   }
 }
@@ -111,6 +112,7 @@
   overflow: auto;
   @include mq(md) {
     overflow: initial;
+    width: 100%;
   }
 }
 
@@ -125,6 +127,7 @@
     min-height: initial;
     height: inherit;
     flex-direction: row;
+    min-width: myrem(800);
   }
 }
 
@@ -134,6 +137,7 @@
   order: 2;
   margin-top: myrem(40);
   @include mq(md) {
+    width: 100%;
     order: initial;
     display: flex;
     justify-content: flex-end;
@@ -178,10 +182,22 @@
     height: inherit;
     display: flex;
     align-items: center;
-    padding: myrem(10);
+    padding: myrem(20) myrem(25);
     transition: 0.4s;
     font-weight: 700;
+    letter-spacing: 0.05em;
     position: relative;
+  }
+}
+
+.p-header-nav-item__link--first {
+  @include mq(md) {
+    padding-right: myrem(43);
+  }
+}
+.p-header-nav-item__link--last {
+  @include mq(md) {
+    padding-left: myrem(43);
   }
 }
 
@@ -202,6 +218,18 @@
     width: 70%;
     height: myrem(1);
     background-color: $red;
+  }
+}
+
+.p-header-nav-item__link--first:hover::after {
+  @include mq(md) {
+    width: 40%;
+  }
+}
+
+.p-header-nav-item__link--last:hover::after {
+  @include mq(md) {
+    width: 60%;
   }
 }
 
